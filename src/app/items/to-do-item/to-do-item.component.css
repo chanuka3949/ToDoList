@@ -1,0 +1,12 @@
+.main{
+    margin: 10px;
+    margin-top: 5rem;
+}
+.toDoItemInput{
+    display: flex;
+    flex-direction: column;
+}
+
+.toDoItemAction{
+    margin-left: 10px;
+}

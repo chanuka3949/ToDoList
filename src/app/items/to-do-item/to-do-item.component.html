@@ -1,0 +1,24 @@
+<mat-card class="main">
+    <form (submit)="onItemCreated(itemForm)" #itemForm="ngForm">
+        <div class="toDoItemInput">
+
+            <mat-form-field>
+                <input matInput name="itemTask" placeholder="Task" ngModel required #task="ngModel">
+                <mat-error *ngIf="task.invalid">Enter a task name</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <textarea matInput name="itemDescription" placeholder="Description" ngModel required #description="ngModel"></textarea>
+                <mat-error *ngIf="description.invalid">Enter a description</mat-error>
+            </mat-form-field>
+
+        </div>
+
+        <div class="toDoItemAction">
+            <mat-card-actions>
+                <button type="submit" mat-raised-button color="primary">Add</button>
+                <button type="reset" mat-raised-button color="accent">Clear</button>
+            </mat-card-actions>
+        </div>
+    </form>
+</mat-card>
