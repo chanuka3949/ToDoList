@@ -6,7 +6,8 @@ import { ToDoItemComponent } from './items/to-do-item/to-do-item.component';
 
 const routes: Routes = [
   { path: '', component: ToDoListComponent },
-  { path: 'add', component: ToDoItemComponent }
+  { path: 'add', component: ToDoItemComponent },
+  { path: 'edit/:taskId', component: ToDoItemComponent }
 ];
 
 @NgModule({

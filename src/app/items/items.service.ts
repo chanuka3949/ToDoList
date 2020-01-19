@@ -39,6 +39,10 @@ export class ItemService {
         return this.itemSubject.asObservable();
     }
 
+    getItem(id: string) {
+        return {...this.items.find(task => task.id === id)};
+    }
+
     addItem(task: string, description: string) {
         const item: Item = { id: null, task: task, description: description };
         this.http.post<{ message: string, itemId: string }>('http://localhost:3000/api/items', item)
@@ -52,8 +56,9 @@ export class ItemService {
     }
 
     editItem(itemData: Item) {
-        let index = this.items.indexOf(itemData);
-        this.items.splice(index, 1);
+        // let index = this.items.indexOf(itemData);
+        // this.items.splice(index, 1);
+       
     }
 
     deleteItem(id: string) {

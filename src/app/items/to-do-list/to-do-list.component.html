@@ -5,12 +5,9 @@
                 {{ item.task }}
             </mat-panel-title>
         </mat-expansion-panel-header>
-
-        <p>
-            {{ item.description }}
-        </p>
+        <p>{{ item.description }}</p>
         <mat-action-row>
-            <!-- <button mat-button (click)="onItemEdit(item)">Edit</button> -->
+            <a mat-button color="primary" [routetLink]="['/edit', 'item.id']">Edit</a>
             <button mat-button color="warn" (click)="onItemDelete(item.id)">Delete</button>
         </mat-action-row>
     </mat-expansion-panel>

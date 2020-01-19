@@ -3,7 +3,12 @@
         <div class="toDoItemInput">
 
             <mat-form-field>
-                <input matInput name="itemTask" placeholder="Task" ngModel required #task="ngModel">
+                <input matInput 
+                name="itemTask" 
+                placeholder="Task" 
+                ngModel 
+                required 
+                #task="ngModel">
                 <mat-error *ngIf="task.invalid">Enter a task name</mat-error>
             </mat-form-field>
 

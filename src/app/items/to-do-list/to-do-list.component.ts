@@ -39,18 +39,18 @@ export class ToDoListComponent implements OnInit, OnDestroy {
 
   }
 
-  // onItemEdit(itemData: Item) {
-  //   this.itemService.deleteItem(itemData);
-  //   let snackBarRef = this.snackBar.open(`Task '${itemData.task}' has been deleted`, 'Undo', {
-  //     duration: 3000
-  //   });
-  //   this.snackBarSubscription =  snackBarRef.onAction().subscribe(() => {
-  //     this.itemService.addItem(itemData.task, itemData.description);
-  //     snackBarRef.dismiss();
-  //   });
-  //   //this.snackBar.open("Hello");
-
-  // }
+  onItemEdit(id: Item) {
+    // this.itemService.deleteItem(itemData);
+    // let snackBarRef = this.snackBar.open(`Task '${itemData.task}' has been deleted`, 'Undo', {
+    //   duration: 3000
+    // });
+    // this.snackBarSubscription =  snackBarRef.onAction().subscribe(() => {
+    //   this.itemService.addItem(itemData.task, itemData.description);
+    //   snackBarRef.dismiss();
+    // });
+    //this.snackBar.open("Hello");
+    this.itemService.editItem(id);
+  }
 
   ngOnDestroy(): void {
     this.itemSubscription.unsubscribe();
